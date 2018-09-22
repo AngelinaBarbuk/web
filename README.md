@@ -71,7 +71,8 @@ RESP:  200 Content-Type: application/vnd.puzzles.puzzle+json**
 	“correct”: ”12”,
 	“wrong”: ”3”,
 	"links": {
-		"self": "/puzzle/123"
+		"self": "/puzzle/123/answer",
+		"puzzle": "/puzzle/123"
 	}
 }
 ```

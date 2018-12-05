@@ -57,17 +57,20 @@ RESP:  200 Content-Type: application/vnd.puzzles.puzzle+json**
 ```
 **RESP:  201 Location: /puzzle/{id}**
 
-**•	Ответить на загадку.** Возвращает в поле result верный или неверный ответ, correct - количество правильных ответов, wrong - количество неправильных.
+**•	Ответить на загадку.**
 **REQ: POST /puzzle/{id}/answer**
 ```json
 {
 	“answer”: “1”
 }
 ```
+**RESP: 200**
+
+**•	Просмотр статистики.** correct - количество правильных ответов, wrong - количество неправильных.
+**REQ: GET /puzzle/{id}/stat**
 **RESP: 200 Content-Type: application/vnd.puzzles.stat+json**
 ```json
 {
-	“result”: true,
 	“correct”: ”12”,
 	“wrong”: ”3”,
 	"links": {
